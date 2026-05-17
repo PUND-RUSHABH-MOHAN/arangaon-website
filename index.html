@@ -1,130 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Arangaon Grampanchayat</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-        @theme {
-            --color-primary: #16a34a;
-            --color-primary-foreground: #ffffff;
-            --color-background: #f8fafc;
-            --color-card: #ffffff;
-            --color-foreground: #0f172a;
-            --color-muted: #f1f5f9;
-            --color-muted-foreground: #64748b;
-            --color-border: #e2e8f0;
-            --color-accent: #dcfce7;
-            --color-accent-foreground: #166534;
-        }
-        body { font-family: system-ui, -apple-system, sans-serif; background-color: var(--color-background); color: var(--color-foreground); }
-    </style>
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arangaon Grampanchayat (Meherabad) — Home</title>
+  <meta name="description" content="Official home of Arangaon Grampanchayat, Meherabad. Transparent governance and citizen services.">
+  <meta property="og:title" content="Arangaon Grampanchayat (Meherabad) — Official Website">
+  <meta property="og:description" content="Official website of Arangaon Grampanchayat, Meherabad — a historic village in Ahilyanagar, Maharashtra.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="flex flex-col min-h-screen">
-    <header class="sticky top-0 z-50 w-full border-b border-border bg-white/80 backdrop-blur">
-        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3">
-                <img src="assets/grampanchayat-logo.webp" alt="Logo" class="h-10 w-10">
-                <div>
-                    <h1 class="font-bold text-lg leading-tight">Arangaon Grampanchayat</h1>
-                    <p class="text-[10px] text-muted-foreground uppercase tracking-widest">(Meherabad), Tal. & Dist. Ahilyanagar</p>
-                </div>
-            </a>
-            <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-                <a href="index.html" class="hover:text-primary transition-colors">Home</a>
-                <a href="about.html" class="hover:text-primary transition-colors">About</a>
-                <a href="history.html" class="hover:text-primary transition-colors">History</a>
-                <a href="services.html" class="hover:text-primary transition-colors">Services</a>
-                <a href="gallery.html" class="hover:text-primary transition-colors">Gallery</a>
-                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
-            </nav>
-        </div>
-    </header>
-    <main class="flex-1">
+<body>
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-card border-b">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="font-bold text-lg text-primary">Arangaon</a>
+      <ul class="flex items-center gap-2 sm:gap-4">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="lang-toggle active" data-lang="en">EN</button></li>
+        <li><button class="lang-toggle" data-lang="mr">MR</button></li>
+      </ul>
+    </div>
+  </nav>
 
-<section class="bg-background">
+  <!-- Hero Section -->
+  <section class="bg-background">
     <div class="container mx-auto px-4 pt-6">
-        <div class="rounded-xl overflow-hidden border border-border shadow-sm bg-card">
-            <img src="assets/grampanchayat-bhavan.jpeg" alt="Gramsansad Bhavan" class="w-full h-[320px] sm:h-[440px] lg:h-[520px] object-cover object-center">
-        </div>
+      <div class="rounded-xl overflow-hidden border shadow-[var(--shadow-card)] bg-card">
+        <img src="assets/grampanchayat-bhavan.jpeg" alt="Gramsansad Bhavan, Arangaon (Meherabad)" class="w-full h-[320px] sm:h-[440px] lg:h-[520px] object-cover object-center">
+      </div>
     </div>
-    <div class="container mx-auto px-4 py-10 text-center sm:text-left">
-        <span class="inline-block px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-medium tracking-wide">ARANGAON • MEHERABAD • AHMEDNAGAR</span>
-        <h1 class="mt-4 text-3xl sm:text-5xl font-bold max-w-3xl leading-tight">Welcome to Arangaon Grampanchayat</h1>
-        <p class="mt-4 max-w-2xl text-base sm:text-lg text-muted-foreground">A historic village of Meherabad — committed to transparent governance, sustainable development, and the well-being of every citizen.</p>
-        <div class="mt-7 flex flex-wrap gap-3 justify-center sm:justify-start">
-            <a href="services.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-primary text-primary-foreground font-semibold shadow-md hover:bg-primary/90">Explore Services <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
-            <a href="contact.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-border bg-white hover:bg-muted font-medium">Contact Office</a>
-        </div>
+    <div class="container mx-auto px-4 py-10">
+      <span class="inline-block px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-medium tracking-wide" data-i18n="home.tag">Official Village Council</span>
+      <h1 class="mt-4 text-3xl sm:text-5xl font-bold max-w-3xl leading-tight text-foreground" data-i18n="home.heroTitle">Arangaon Grampanchayat</h1>
+      <p class="mt-4 max-w-2xl text-base sm:text-lg text-muted-foreground" data-i18n="home.heroSubtitle">Empowering citizens through transparent governance, sustainable development, and community-driven initiatives in Meherabad.</p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="services.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-primary text-primary-foreground font-semibold shadow-md hover:bg-primary/90">
+          <span data-i18n="home.exploreServices">Explore Services</span>
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        <a href="contact.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-border hover:bg-muted font-medium text-foreground">
+          <span data-i18n="home.contactOffice">Contact Office</span>
+        </a>
+      </div>
     </div>
-</section>
+  </section>
 
-<section class="container mx-auto px-4 py-14">
+  <!-- Welcome Section -->
+  <section class="container mx-auto px-4 py-14">
     <div class="max-w-3xl">
-        <h2 class="text-2xl sm:text-3xl font-bold">Serving Our Village with Pride</h2>
-        <p class="mt-4 text-muted-foreground leading-relaxed">Arangaon Grampanchayat works for the all-round development of our village — from clean water and roads to education, healthcare, and the preservation of our rich heritage. We believe in participation, transparency, and progress for every family.</p>
+      <h2 class="text-2xl sm:text-3xl font-bold text-foreground" data-i18n="home.welcomeTitle">Welcome to Arangaon</h2>
+      <p class="mt-4 text-muted-foreground leading-relaxed" data-i18n="home.welcomeBody">A historic village in the heart of Ahilyanagar, Maharashtra, Arangaon is known for its spiritual heritage, agricultural prosperity, and strong community values. Our Grampanchayat is committed to sustainable development and citizen empowerment.</p>
     </div>
-</section>
+  </section>
 
-<section class="bg-amber-50/50 border-y border-border">
+  <!-- Highlights Section -->
+  <section class="bg-[var(--gradient-warm)] border-y">
     <div class="container mx-auto px-4 py-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="bg-card rounded-xl p-5 shadow-sm border border-border">
-            <div class="h-10 w-10 rounded-lg bg-accent text-accent-foreground flex items-center justify-center mb-3"><i data-lucide="building-2" class="h-5 w-5"></i></div>
-            <h3 class="font-semibold">Local Governance</h3><p class="text-sm text-muted-foreground mt-1">Decisions made by and for the village.</p>
+      <div class="bg-card rounded-xl p-5 shadow-[var(--shadow-card)] border">
+        <div class="h-10 w-10 rounded-lg bg-accent text-accent-foreground grid place-items-center mb-3">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"></path></svg>
         </div>
-        <div class="bg-card rounded-xl p-5 shadow-sm border border-border">
-            <div class="h-10 w-10 rounded-lg bg-accent text-accent-foreground flex items-center justify-center mb-3"><i data-lucide="users" class="h-5 w-5"></i></div>
-            <h3 class="font-semibold">Citizen First</h3><p class="text-sm text-muted-foreground mt-1">Quick services and grievance redressal.</p>
+        <h3 class="font-semibold" data-i18n="home.h1.title">Infrastructure</h3>
+        <p class="text-sm text-muted-foreground mt-1" data-i18n="home.h1.text">Modern amenities and sustainable development projects</p>
+      </div>
+      <div class="bg-card rounded-xl p-5 shadow-[var(--shadow-card)] border">
+        <div class="h-10 w-10 rounded-lg bg-accent text-accent-foreground grid place-items-center mb-3">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 8.646 4 4 0 010-8.646M3 20.394V19a6 6 0 0112 0v1.394M9 12H3m18 0h-6"></path></svg>
         </div>
-        <div class="bg-card rounded-xl p-5 shadow-sm border border-border">
-            <div class="h-10 w-10 rounded-lg bg-accent text-accent-foreground flex items-center justify-center mb-3"><i data-lucide="leaf" class="h-5 w-5"></i></div>
-            <h3 class="font-semibold">Sustainable Growth</h3><p class="text-sm text-muted-foreground mt-1">Water, sanitation and clean villages.</p>
+        <h3 class="font-semibold" data-i18n="home.h2.title">Community</h3>
+        <p class="text-sm text-muted-foreground mt-1" data-i18n="home.h2.text">Empowering citizens and fostering local participation</p>
+      </div>
+      <div class="bg-card rounded-xl p-5 shadow-[var(--shadow-card)] border">
+        <div class="h-10 w-10 rounded-lg bg-accent text-accent-foreground grid place-items-center mb-3">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
         </div>
-        <div class="bg-card rounded-xl p-5 shadow-sm border border-border">
-            <div class="h-10 w-10 rounded-lg bg-accent text-accent-foreground flex items-center justify-center mb-3"><i data-lucide="shield-check" class="h-5 w-5"></i></div>
-            <h3 class="font-semibold">Transparency</h3><p class="text-sm text-muted-foreground mt-1">Open records and accountable work.</p>
+        <h3 class="font-semibold" data-i18n="home.h3.title">Environment</h3>
+        <p class="text-sm text-muted-foreground mt-1" data-i18n="home.h3.text">Protecting natural resources and promoting sustainability</p>
+      </div>
+      <div class="bg-card rounded-xl p-5 shadow-[var(--shadow-card)] border">
+        <div class="h-10 w-10 rounded-lg bg-accent text-accent-foreground grid place-items-center mb-3">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
         </div>
+        <h3 class="font-semibold" data-i18n="home.h4.title">Security</h3>
+        <p class="text-sm text-muted-foreground mt-1" data-i18n="home.h4.text">Ensuring safety and transparency in governance</p>
+      </div>
     </div>
-</section>
+  </section>
 
-    </main>
-    <footer class="bg-white border-t border-border mt-auto">
-        <div class="container mx-auto px-4 py-12 grid gap-8 md:grid-cols-4">
-            <div class="md:col-span-2">
-                <div class="flex items-center gap-3 mb-4">
-                    <img src="assets/grampanchayat-logo.webp" alt="Logo" class="h-8 w-8 grayscale opacity-70">
-                    <h2 class="font-bold text-lg">Arangaon Grampanchayat</h2>
-                </div>
-                <p class="text-sm text-muted-foreground max-w-sm mb-6">A historic village serving its citizens with transparency and care.</p>
-                <div class="flex flex-col gap-2 text-sm text-muted-foreground">
-                    <span class="flex items-center gap-2"><i data-lucide="map-pin" class="h-4 w-4"></i> Gramsansad Bhavan, Arangaon (Meherabad), Ahilyanagar, Maharashtra</span>
-                    <span class="flex items-center gap-2"><i data-lucide="mail" class="h-4 w-4"></i> arangaongp@gmail.com</span>
-                </div>
-            </div>
-            <div>
-                <h3 class="font-semibold mb-4">Quick Links</h3>
-                <ul class="space-y-3 text-sm text-muted-foreground">
-                    <li><a href="about.html" class="hover:text-foreground">About</a></li>
-                    <li><a href="history.html" class="hover:text-foreground">History</a></li>
-                    <li><a href="services.html" class="hover:text-foreground">Services</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="font-semibold mb-4">Contact</h3>
-                <ul class="space-y-3 text-sm text-muted-foreground">
-                    <li><a href="gallery.html" class="hover:text-foreground">Gallery</a></li>
-                    <li><a href="contact.html" class="hover:text-foreground">Contact Us</a></li>
-                </ul>
-            </div>
+  <!-- Quick Links -->
+  <section class="container mx-auto px-4 py-16 grid gap-6 md:grid-cols-3">
+    <a href="about.html" class="group rounded-xl border bg-card p-6 hover:shadow-[var(--shadow-elegant)] transition-shadow">
+      <h3 class="font-bold text-lg group-hover:text-primary" data-i18n="home.q1.title">About Us</h3>
+      <p class="text-sm text-muted-foreground mt-2" data-i18n="home.q1.text">Learn about our village, leadership, and mission</p>
+      <span class="inline-flex items-center gap-1 text-primary text-sm font-medium mt-4">
+        <span data-i18n="home.readMore">Read more</span>
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+      </span>
+    </a>
+    <a href="history.html" class="group rounded-xl border bg-card p-6 hover:shadow-[var(--shadow-elegant)] transition-shadow">
+      <h3 class="font-bold text-lg group-hover:text-primary" data-i18n="home.q2.title">Our History</h3>
+      <p class="text-sm text-muted-foreground mt-2" data-i18n="home.q2.text">Spiritual and cultural heritage spanning centuries</p>
+      <span class="inline-flex items-center gap-1 text-primary text-sm font-medium mt-4">
+        <span data-i18n="home.readMore">Read more</span>
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+      </span>
+    </a>
+    <a href="gallery.html" class="group rounded-xl border bg-card p-6 hover:shadow-[var(--shadow-elegant)] transition-shadow">
+      <h3 class="font-bold text-lg group-hover:text-primary" data-i18n="home.q3.title">Photo Gallery</h3>
+      <p class="text-sm text-muted-foreground mt-2" data-i18n="home.q3.text">Visual stories of village life and development</p>
+      <span class="inline-flex items-center gap-1 text-primary text-sm font-medium mt-4">
+        <span data-i18n="home.readMore">Read more</span>
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+      </span>
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-card border-t mt-16">
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid gap-8 md:grid-cols-3 mb-8">
+        <div>
+          <h3 class="font-bold text-foreground mb-3">Arangaon Grampanchayat</h3>
+          <p class="text-sm text-muted-foreground">Official website of the village council in Meherabad, Ahilyanagar, Maharashtra.</p>
         </div>
-        <div class="border-t border-border py-6 text-center text-xs text-muted-foreground">
-            &copy; 2026 Arangaon Grampanchayat. All rights reserved. Designed for the citizens of Arangaon.
+        <div>
+          <h4 class="font-semibold text-foreground mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="text-muted-foreground hover:text-primary">About</a></li>
+            <li><a href="services.html" class="text-muted-foreground hover:text-primary">Services</a></li>
+            <li><a href="contact.html" class="text-muted-foreground hover:text-primary">Contact</a></li>
+          </ul>
         </div>
-    </footer>
-    <script>
-        lucide.createIcons();
-    </script>
+        <div>
+          <h4 class="font-semibold text-foreground mb-3">Contact</h4>
+          <p class="text-sm text-muted-foreground">
+            Email: <a href="mailto:grampanchayat@arangaon.org" class="text-primary">grampanchayat@arangaon.org</a><br>
+            Phone: +91 (contact local office)
+          </p>
+        </div>
+      </div>
+      <div class="border-t pt-6 text-center text-sm text-muted-foreground">
+        <p>&copy; 2025 Arangaon Grampanchayat. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
