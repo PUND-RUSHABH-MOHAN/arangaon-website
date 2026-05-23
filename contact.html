@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Arangaon Grampanchayat</title>
+<meta name="description" content="Contact Arangaon Grampanchayat office, Meherabad, Ahilyanagar.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/grampanchayat-logo.webp">
+</head>
+<body>
+<div class="utility">
+  <div class="container">
+    <button id="lang-toggle" type="button" data-i18n-skip style="background:rgba(255,255,255,0.15);color:inherit;border:1px solid rgba(255,255,255,0.25);padding:4px 10px;border-radius:6px;font-size:0.78rem;cursor:pointer;font-weight:600;">🌐 मराठी</button>
+    <span>Meherabad • Ahilyanagar</span>
+    <a href="mailto:arangaongram@gmail.com">✉ arangaongram@gmail.com</a>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="assets/grampanchayat-logo.webp" alt="Arangaon Grampanchayat logo">
+      <div>
+        <div class="name">Arangaon Grampanchayat</div>
+        <div class="loc">Meherabad • Ahilyanagar</div>
+      </div>
+    </a>
+    <nav class="nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="history.html">History</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="contact.html" class="active">Contact</a></nav>
+  </div>
+</header>
+<main>
+<div class="page-header">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>We're here to help. Reach out to the Grampanchayat office.</p>
+  </div>
+</div>
+<section>
+  <div class="container" style="display:grid;gap:2.5rem;grid-template-columns:1fr 1fr;">
+    <div style="display:flex;flex-direction:column;gap:1.25rem;">
+      <div class="contact-row"><div class="ic">✉</div><div><div class="muted" style="font-size:0.85rem;">Email</div><a class="link" href="mailto:arangaongram@gmail.com" style="font-weight:600;">arangaongram@gmail.com</a></div></div>
+      <div class="contact-row"><div class="ic">📍</div><div><div class="muted" style="font-size:0.85rem;">Office Address</div><div style="font-weight:600;">Gramsansad Bhavan, Arangaon (Meherabad), Tal. & Dist. Ahilyanagar, Maharashtra</div></div></div>
+      <div class="contact-row"><div class="ic">📞</div><div><div class="muted" style="font-size:0.85rem;">Phone</div><div style="font-weight:600;">+91 98225 23425</div></div></div>
+    </div>
+    <form class="contact-form" action="mailto:arangaongram@gmail.com" method="post" enctype="text/plain">
+      <h3>Send us a message</h3>
+      <p class="muted" style="font-size:0.9rem;margin-top:0.25rem;">This will open your email app to send the message to the office.</p>
+      <label>Your Name</label>
+      <input type="text" name="name" placeholder="Full name" required>
+      <label>Message</label>
+      <textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
+      <div style="margin-top:1rem;"><button type="submit" class="btn btn-primary">Send Email</button></div>
+    </form>
+  </div>
+</section>
+<style>@media(max-width:900px){section .container[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}}</style>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Arangaon Grampanchayat</h3>
+        <p style="opacity:0.92;font-size:0.9rem;">(Meherabad), Tal. & Dist. Ahilyanagar</p>
+        <p style="opacity:0.92;font-size:0.9rem;margin-top:0.5rem;">A historic village serving its citizens with transparency and care.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="history.html">History</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li>📍 Gramsansad Bhavan, Arangaon (Meherabad), Tal. & Dist. Ahilyanagar, Maharashtra</li>
+          <li>✉ <a href="mailto:arangaongram@gmail.com">arangaongram@gmail.com</a></li>
+          <li>📞 +91 98225 23425</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Arangaon Grampanchayat. All rights reserved.</span>
+      <span>Designed for the citizens of Arangaon</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/i18n.js"></script>
+</body>
+</html>
