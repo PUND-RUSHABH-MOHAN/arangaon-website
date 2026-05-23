@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Arangaon Grampanchayat</title>
 <meta name="description" content="Contact Arangaon Grampanchayat office, Meherabad, Ahilyanagar.">
+<!-- Security Headers (Fallback) -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com; connect-src 'self' https://api.arangaon.org; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="assets/grampanchayat-logo.webp">
 <!-- Cloudflare Turnstile Script -->
@@ -39,64 +43,72 @@
 </div>
 
 <section>
-  <div class="container" style="display:grid;gap:2.5rem;grid-template-columns:1fr 1fr;">
+  <div class="container" style="display:grid;gap:3rem;grid-template-columns:1fr 1fr; align-items: start;">
 
     <!-- Left: Contact Info -->
-    <div style="display:flex;flex-direction:column;gap:1.25rem;">
-      <div class="contact-row">
-        <div class="ic">✉</div>
+    <div style="display:flex;flex-direction:column;gap:1.5rem; padding-top: 1rem;">
+      <div class="contact-row" style="display:flex; gap:1rem; align-items:flex-start;">
+        <div class="ic" style="font-size:1.5rem; background:#f0fdf4; padding:0.8rem; border-radius:50%; color:#166534;">✉</div>
         <div>
-          <div class="muted" style="font-size:0.85rem;">Email</div>
-          <a class="link" href="mailto:arangaongram@gmail.com" style="font-weight:600;">arangaongram@gmail.com</a>
+          <div class="muted" style="font-size:0.85rem; color:#6b7280; text-transform:uppercase; letter-spacing:0.05em;">Email</div>
+          <a class="link" href="mailto:arangaongram@gmail.com" style="font-weight:600; font-size:1.1rem; color:#111827; text-decoration:none;">arangaongram@gmail.com</a>
         </div>
       </div>
-      <div class="contact-row">
-        <div class="ic">📍</div>
+      <div class="contact-row" style="display:flex; gap:1rem; align-items:flex-start;">
+        <div class="ic" style="font-size:1.5rem; background:#f0fdf4; padding:0.8rem; border-radius:50%; color:#166534;">📍</div>
         <div>
-          <div class="muted" style="font-size:0.85rem;">Office Address</div>
-          <div style="font-weight:600;">Gramsansad Bhavan, Arangaon (Meherabad), Tal. & Dist. Ahilyanagar, Maharashtra</div>
+          <div class="muted" style="font-size:0.85rem; color:#6b7280; text-transform:uppercase; letter-spacing:0.05em;">Office Address</div>
+          <div style="font-weight:600; font-size:1.1rem; color:#111827; line-height:1.5;">Gramsansad Bhavan, Arangaon<br>(Meherabad), Tal. & Dist. Ahilyanagar,<br>Maharashtra</div>
         </div>
       </div>
-      <div class="contact-row">
-        <div class="ic">📞</div>
+      <div class="contact-row" style="display:flex; gap:1rem; align-items:flex-start;">
+        <div class="ic" style="font-size:1.5rem; background:#f0fdf4; padding:0.8rem; border-radius:50%; color:#166534;">📞</div>
         <div>
-          <div class="muted" style="font-size:0.85rem;">Phone</div>
-          <div style="font-weight:600;">+91 98225 23425</div>
+          <div class="muted" style="font-size:0.85rem; color:#6b7280; text-transform:uppercase; letter-spacing:0.05em;">Phone</div>
+          <div style="font-weight:600; font-size:1.1rem; color:#111827;">+91 98225 23425</div>
         </div>
       </div>
     </div>
 
     <!-- Right: Contact Form -->
-    <div class="contact-form">
-      <h3>Send us a message</h3>
-      <p class="muted" style="font-size:0.9rem;margin-top:0.25rem;">Fill in the form and we will get back to you shortly.</p>
+    <div class="contact-form-card">
+      <h3 style="margin-top:0; margin-bottom:0.25rem; font-size:1.5rem; color:#111827;">Send us a message</h3>
+      <p class="muted" style="font-size:0.95rem; color:#6b7280; margin-bottom:1.5rem;">Fill in the form below and we will get back to you shortly.</p>
 
       <!-- Success Message -->
-      <div id="form-success" style="display:none;background:#d1fae5;border:1px solid #6ee7b7;
-        border-radius:0.6rem;padding:0.9rem 1.1rem;color:#065f46;margin:1rem 0;font-size:0.95rem;">
+      <div id="form-success" style="display:none;background:#ecfdf5;border:1px solid #a7f3d0;
+        border-radius:0.5rem;padding:1rem;color:#065f46;margin-bottom:1.5rem;font-size:0.95rem; font-weight:500;">
         ✅ Your message was sent successfully! We will get back to you soon.
       </div>
 
       <!-- Error Message -->
-      <div id="form-error" style="display:none;background:#fee2e2;border:1px solid #fca5a5;
-        border-radius:0.6rem;padding:0.9rem 1.1rem;color:#991b1b;margin:1rem 0;font-size:0.95rem;">
-        ❌ Something went wrong. Please try again or email us directly at arangaongram@gmail.com
+      <div id="form-error" style="display:none;background:#fef2f2;border:1px solid #fecaca;
+        border-radius:0.5rem;padding:1rem;color:#991b1b;margin-bottom:1.5rem;font-size:0.95rem; font-weight:500;">
+        ❌ Something went wrong. Please try again or email us directly.
       </div>
 
-      <label>Your Name</label>
-      <input type="text" id="contact-name" placeholder="Full name" required>
+      <div class="form-group">
+        <label class="form-label" for="contact-name">Your Name</label>
+        <input class="form-control" type="text" id="contact-name" placeholder="E.g. Ramesh Patil" required>
+      </div>
 
-      <label>Your Email</label>
-      <input type="email" id="contact-email" placeholder="so we can reply to you" required>
+      <div class="form-group">
+        <label class="form-label" for="contact-email">Your Email</label>
+        <input class="form-control" type="email" id="contact-email" placeholder="so we can reply to you" required>
+      </div>
 
-      <label>Message</label>
-      <textarea id="contact-message" rows="5" placeholder="How can we help?" required></textarea>
+      <div class="form-group">
+        <label class="form-label" for="contact-message">Message</label>
+        <textarea class="form-control" id="contact-message" rows="4" placeholder="How can we help?" required></textarea>
+      </div>
 
-      <!-- Cloudflare Turnstile Widget inserted here -->
-      <div class="cf-turnstile" data-sitekey="0x4AAAAAADUxjfyN7yadRNGi" data-theme="light" style="margin-top: 1rem;"></div>
+      <!-- Cloudflare Turnstile Widget -->
+      <div class="form-group">
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAADUxjfyN7yadRNGi" data-theme="light"></div>
+      </div>
 
-      <div style="margin-top:1rem;">
-        <button id="submit-btn" class="btn btn-primary" onclick="submitContactForm()">
+      <div style="margin-top:1.5rem;">
+        <button id="submit-btn" class="btn-submit" onclick="submitContactForm()">
           Send Message
         </button>
       </div>
@@ -106,14 +118,86 @@
 </section>
 
 <style>
+  /* Professional Form Styling */
+  .contact-form-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+  }
+  
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  .form-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.4rem;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: #1f2937;
+    background-color: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+  
+  .form-control::placeholder {
+    color: #9ca3af;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #059669; /* Green focus ring */
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15);
+  }
+  
+  .btn-submit {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #16a34a; /* Professional Green */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(22, 163, 74, 0.2);
+  }
+  
+  .btn-submit:hover {
+    background-color: #15803d; /* Darker green on hover */
+    box-shadow: 0 6px 8px -1px rgba(22, 163, 74, 0.3);
+    transform: translateY(-1px);
+  }
+
+  .btn-submit:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Responsive fixes */
   @media(max-width:900px){
     section .container[style*="grid-template-columns:1fr 1fr"]{
       grid-template-columns:1fr !important;
     }
-  }
-  #submit-btn:disabled {
-    opacity: 0.65;
-    cursor: not-allowed;
+    .contact-form-card {
+      padding: 1.5rem;
+    }
   }
 </style>
 </main>
@@ -155,15 +239,12 @@
     const success = document.getElementById('form-success');
     const error   = document.getElementById('form-error');
 
-    // Get the Turnstile token that Cloudflare generated
     const turnstileInput = document.querySelector('[name="cf-turnstile-response"]');
     const turnstileToken = turnstileInput ? turnstileInput.value : '';
 
-    // Hide any previous messages
     success.style.display = 'none';
     error.style.display   = 'none';
 
-    // Validation
     if (!name || !email || !message) {
       alert('Please fill in all fields before sending.');
       return;
@@ -173,13 +254,11 @@
       return;
     }
     
-    // Check if the user passed the CAPTCHA check
     if (!turnstileToken) {
       alert('Please complete the security check.');
       return;
     }
 
-    // Loading state
     btn.textContent = 'Sending...';
     btn.disabled    = true;
 
@@ -188,9 +267,7 @@
         method:  'POST',
         headers: {
           'Content-Type': 'application/json'
-          // x-api-key has been safely removed from here!
         },
-        // We include the token in the JSON body so the Lambda backend can check it
         body: JSON.stringify({ name, email, message, turnstileToken })
       });
 
@@ -202,7 +279,6 @@
         document.getElementById('contact-email').value   = '';
         document.getElementById('contact-message').value = '';
         
-        // Reset the CAPTCHA widget so it can be used again
         if (typeof turnstile !== 'undefined') turnstile.reset();
       } else {
         error.style.display = 'block';
