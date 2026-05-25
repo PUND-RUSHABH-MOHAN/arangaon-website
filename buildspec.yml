@@ -1,5 +1,12 @@
 version: 0.2
 phases:
+  pre_build:
+    commands:
+      - |
+        if [ -z "$CF_DISTRIBUTION_ID" ]; then
+          echo "ERROR: CF_DISTRIBUTION_ID is not set. Aborting."
+          exit 1
+        fi
   post_build:
     commands:
       - aws cloudfront create-invalidation --distribution-id $CF_DISTRIBUTION_ID --paths "/*"
