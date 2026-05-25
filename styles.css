@@ -390,4 +390,10 @@ form.contact-form input, form.contact-form textarea {
   .contact-form-card {
     padding: 1.5rem;
   }
-}
+}/* about.html two-column layout */
+.about-two-col { display:grid; gap:2.5rem; grid-template-columns:2fr 1fr; }
+@media(max-width:900px) { .about-two-col { grid-template-columns:1fr; } }
+
+/* history.html two-column layout */
+.history-two-col { display:grid; gap:2.5rem; grid-template-columns:1fr 1fr; }
+@media(max-width:900px) { .history-two-col { grid-template-columns:1fr; } }
